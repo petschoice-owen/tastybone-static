@@ -7,4 +7,4 @@
 * Run localhost environment with `npm run dev`
 
 ## Project Name: TastyBone
-* [Home](https://github.com/petschoice-owen/tastybone-static/index.html)
+* [Home](https://petschoice-owen.github.io/tastybone-static/index.html)
