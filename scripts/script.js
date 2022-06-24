@@ -61,6 +61,18 @@ var mainAutoPadding = () => {
         }
     }
 }
+
+// flavours functions
+var flavours = () => {
+    if ($(".flavours .flavour-name").length) {
+        $(".flavours .flavour-link").each(function() {
+            $(this).click(function(e) {
+                e.preventDefault();
+                $(this).toggleClass("flavour-selected");
+            });
+        });
+    }
+}
   
 // initialize the functions
 windowScrolled();
@@ -68,6 +80,7 @@ windowScrolled();
 $(document).ready(function() {
     // customSlider();
     // mainAutoPadding();
+    flavours();
 });
   
 $(window).resize(function() {

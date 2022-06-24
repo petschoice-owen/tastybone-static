@@ -1,0 +1,96 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the flavours component.
+// -----------------------------------------------------------------------------
+
+.flavours {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .flavour-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        padding: 7px;
+    }
+
+    i {
+        position: absolute;
+        top: -10px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        margin: auto;
+        font-size: 18px;
+        color: #fff;
+        background-color: #000;
+        border-radius: 50%;
+        transition: all .25s ease-in-out;
+        opacity: 0;
+    }
+
+    .flavour-link {
+        position: relative;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: #ccc;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        transition: all .25s ease-in-out;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    .flavour-selected {
+        border-color: #000;
+
+        i {
+            opacity: 1;
+        }
+    }
+
+    .flavour-name {
+        font-family: $font-helveticaneue-black;
+        font-size: 11px;
+        line-height: 1.2;
+    }
+
+    .world-flavours {
+        .flavour-name {
+            font-size: 0;
+
+            &::before {
+                height: auto;
+            }
+        }
+
+        .flavour-text {
+            font-size: 16px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .flavour-link:hover {
+            top: -3px;
+        }
+    }
+}

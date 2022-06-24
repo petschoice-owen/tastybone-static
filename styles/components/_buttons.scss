@@ -71,10 +71,16 @@
         border-left-color: #fff;
     }
 
-    &:hover {
+    &.btn-arrow-down {
+        border-top-color: #fff;
+    }
+
+    &:hover,
+    &:focus {
         color: #fff;
         background-color: $brand-hover;
         outline: none;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.5);
     }
 
     @media (max-width: 991px) {
@@ -101,7 +107,8 @@
         border-left-color: $text-color;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: $text-color;
         background-color: $white-hover;
         outline: none;
@@ -136,6 +143,36 @@
         
         &::after {
             right: 20px;
+        }
+    }
+}
+
+.btn-arrow-down {
+    position: relative;
+    padding-right: 60px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        // right: 30px;
+        right: 25px;
+        bottom: 0;
+        z-index: 5;
+        width: 0;
+        height: 0;
+        margin: auto;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 15px solid;
+    }
+
+    @media (max-width: 991px) {
+        padding-right: 50px;
+        
+        &::after {
+            // right: 20px;
+            right: 17px;
         }
     }
 }

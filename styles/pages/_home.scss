@@ -73,6 +73,35 @@
 
         .section-heading {
             align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .subheading {
+            display: flex;
+            margin-bottom: 50px;
+            font-size: 24px;
+            font-weight: 900;
+        }
+
+        .accordion {
+            .accordion-item {
+                border: 0;
+            }
+
+            .accordion-button {
+                outline: none;
+
+                @extend .btn-brand;
+                @extend .btn-arrow-down;
+            }
+
+            .accordion-body {
+                padding: 20px 0;
+            }
+        }
+
+        .button-holder {
+            padding-top: 20px;
         }
     }
 
