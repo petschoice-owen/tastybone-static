@@ -26,12 +26,12 @@ var customSlider = () => {
             autoplaySpeed: 3000,
             dots: false,
             infinite: true,
-            speed: 1500,
+            speed: 700,
             dots: false,
             prevArrow: false,
             nextArrow: false,
             swipe: false,
-            // fade: true,
+            fade: true,
             // cssEase: 'linear'
         });
     }  
@@ -78,7 +78,7 @@ var flavours = () => {
 windowScrolled();
   
 $(document).ready(function() {
-    // customSlider();
+    customSlider();
     // mainAutoPadding();
     flavours();
 });

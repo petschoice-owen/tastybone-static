@@ -55,13 +55,15 @@
     }
     
     .tasty {
-        padding: 120px 0 50px;
+        padding: 150px 0 70px;
+        overflow: hidden;
 
         .container {
             display: flex;
         }
 
         .bones {
+            position: relative;
             width: 40%;
         }
 
@@ -73,14 +75,34 @@
 
         .section-heading {
             align-items: flex-start;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .subheading {
             display: flex;
-            margin-bottom: 50px;
-            font-size: 24px;
+            margin-bottom: 60px;
             font-weight: 900;
+            font-size: 24px;
+            line-height: 1.3;
+        }
+
+        .slider-wrapper {
+            position: absolute;
+            top: -60px;
+            left: -10%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .custom-slider {
+            .image-holder {
+                display: flex;
+                justify-content: center;
+            }
+
+            img {
+                max-width: 100%;
+            }
         }
 
         .accordion {
@@ -209,10 +231,6 @@
             margin-bottom: 30px;
         }
     }
-
-    @media (max-width: 1399px) {
-
-    }
   
     @media (max-width: 1199px) {
         .blog {
@@ -223,6 +241,18 @@
     }
   
     @media (max-width: 991px) {
+        .tasty {
+            padding: 70px 0;
+
+            .bones {
+                display: none;
+            }
+
+            .content {
+                width: 100%;
+            }
+        }
+
         .tastybone-test {
             .item {
                 padding: 0 15px;
@@ -267,6 +297,20 @@
     }
   
     @media (max-width: 767px) {
+        .tasty {
+            padding: 50px 0;
+            
+            .heading {
+                margin-bottom: 20px;
+            }
+
+            .subheading {
+                margin-bottom: 40px;
+                line-height: 1.2;
+                font-size: 20px;
+            }
+        }
+
         .tastybone-test {
             padding: 50px 0 40px;
 
