@@ -22,7 +22,8 @@
 // 4. Components
 @import
     'components/buttons',
-    'components/flavours';
+    'components/flavours',
+    'components/page-navigation';
 
 // 5. Layout-related sections
 @import
@@ -32,4 +33,5 @@
 
 // 6. Page-specific styles
 @import
-    'pages/home';
+    'pages/home',
+    'pages/about';
