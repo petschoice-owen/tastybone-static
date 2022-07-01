@@ -136,6 +136,7 @@
         border-top: 12px solid transparent;
         border-bottom: 12px solid transparent;
         border-left: 15px solid;
+        pointer-events: none;
     }
 
     @media (max-width: 991px) {

@@ -135,6 +135,12 @@
         margin-top: 30px;
     }
 
+    @media (max-width: 1199px) {
+        .text-heading h2 {
+            font-size: 32px;
+        }
+    }
+
     @media (max-width: 991px) {
         .ranges {
             padding: 35px 0;
@@ -173,7 +179,7 @@
         .ranges {
             padding: 20px 0;
         }
-        
+
         .range-item {
             flex-direction: column;
         }

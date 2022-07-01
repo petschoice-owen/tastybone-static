@@ -23,7 +23,8 @@
 @import
     'components/buttons',
     'components/flavours',
-    'components/page-navigation';
+    'components/page-navigation',
+    'components/forms';
 
 // 5. Layout-related sections
 @import
@@ -35,4 +36,5 @@
 @import
     'pages/home',
     'pages/about',
-    'pages/our-range';
+    'pages/our-range',
+    'pages/contact';
