@@ -102,6 +102,122 @@ var customAccordion = () => {
         $("#accordion_custom .accordion-item:first-child .accordion-collapse").addClass("show");
     }
 }
+
+// stockists function
+var stockists = () => {
+    if ($(".page-stockists").length) {
+        // $("#search_input").on("keyup", function() {
+        //     if ($(this).val().length >= 3) {
+        //         $("#search_stockist").removeClass("btn-not-clickable");
+
+        //         var input, filter, ul, li, span, i, txtValue;
+        //         input = document.getElementById("search_input");
+        //         filter = input.value.toUpperCase();
+        //         ul = document.getElementById("search_result_items");
+        //         li = ul.getElementsByTagName("li");
+        
+        //         for (i = 0; i < li.length; i++) {
+        //             span = li[i].getElementsByTagName("span")[0];
+        //             txtValue = span.textContent || span.innerText;
+        
+        //             if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        //                 li[i].style.display = "";
+        //             } else {
+        //                 li[i].style.display = "none";
+        //             }
+        //         }
+
+        //         if ($(this).val()) {
+        //             $("#search_text").css("display","none");
+        //             $("#search_results").removeClass("d-none").css("display", "block");
+
+        //             if ($("#search_result_items .item").length === $("#search_result_items .item[style='display: none;']").length ) {
+        //                 $("#search_results").css("display","none");
+        //                 $("#search_result_none").removeClass("d-none").css("display", "block");
+        //             }
+
+        //             else {
+        //                 $("#search_result_none").css("display","none");
+        //                 $("#search_results").removeClass("d-none").css("display", "block");
+        //             }
+        //         }
+
+        //         else {
+        //             $("#search_results").css("display","none");
+        //             $("#search_result_none").css("display","none");
+        //             $("#search_text").css("display", "block");
+
+        //             if ($(this).val() == "") {
+        //                 $("#search_results").css("display","none");
+        //             }
+        //         }
+        //     }
+
+        //     else {
+        //         $("#search_stockist").addClass("btn-not-clickable");
+        //     }
+        // });
+
+        $("#search_input").on('keyup', function() {
+            var input, filter, ul, li, span, i, txtValue;
+            input = document.getElementById("search_input");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("search_results_items");
+            li = ul.getElementsByTagName("li");
+    
+            for (i = 0; i < li.length; i++) {
+                span = li[i].getElementsByTagName("span")[0];
+                txtValue = span.textContent || span.innerText;
+    
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+
+            if ($(this).val()) {
+                $("#search_text").css("display","none");
+                $("#search_results").removeClass("d-none").css("display", "block");
+
+                if ($("#search_results_items .item").length === $("#search_results_items .item[style='display: none;']").length ) {
+                    $("#search_results").css("display","none");
+                    $("#search_results_none").removeClass("d-none").css("display", "block");
+                }
+
+                else {
+                    $("#search_results_none").css("display","none");
+                    $("#search_results").removeClass("d-none").css("display", "block");
+                }
+            }
+
+            else {
+                $("#search_results").css("display","none");
+                $("#search_results_none").css("display","none");
+                $("#search_text").css("display", "block");
+
+                if ($(this).val() == "") {
+                    $("#search_results").css("display","none");
+                }
+            }
+        });
+
+        $("#search_results_items .contact .number").each(function(){
+            var formatNumber = $(this).text().replace(/\s/g, '').replace(/[^a-zA-Z0-9]/g, '');
+            $(this).attr("href","tel:"+formatNumber);
+        });
+
+        $(document).keypress(function(event) {
+            if (event.which == '13') {
+                event.preventDefault();
+            }
+        });
+
+        $("#search_stockist").on('click', function(e) {
+            e.preventDefault();
+        });
+    }
+}
   
 // initialize the functions
 windowScrolled();
@@ -112,10 +228,14 @@ $(document).ready(function() {
     flavours();
     pageNav();
     customAccordion();
+    stockists();
 });
   
 $(window).resize(function() {
     // mainAutoPadding();
 });
-  
+
+window.onload = function() {
+    stockists();
+}
   

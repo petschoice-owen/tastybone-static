@@ -6,8 +6,23 @@
 
 .page-home {
     .tastybone-test {
+        position: relative;
         padding: 70px 0;
         background-color: #000;
+
+        .bg-dog {
+            position: absolute;
+            bottom: 0;
+            left: -70px;
+            z-index: 1;
+            width: auto;
+            height: calc(100% - 150px);
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+        }
 
         .wrapper {
             display: flex;
@@ -254,6 +269,10 @@
         }
 
         .tastybone-test {
+            .bg-dog {
+                display: none;
+            }
+            
             .item {
                 padding: 0 15px;
                 width: 33.33%;

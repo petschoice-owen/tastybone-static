@@ -4,17 +4,13 @@
 // This file contains styles that are specific to the single blog page.
 // -----------------------------------------------------------------------------
 
-.page-single-blog {
-    .single-blog {
+.page-default {
+    .default {
         padding: 70px 0;
-
-        .btn-brand {
-            margin-bottom: 50px;
-        }
 
         h1, h2, h3, h4, h5, h6 {
             line-height: 1;
-            text-transform: uppercase;
+            text-transform: none;
             color: #000;
         }
 
@@ -48,44 +44,18 @@
             color: #000;
         }
 
-        .blog-meta {
-            margin-top: 10px;
+        *:not(:last-child) {
+            margin-bottom: 15px;
         }
 
-        .featured-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 30px;
-
-            img {
-                width: auto;
-                max-width: 100%;
-                height: auto;
-                max-height: 100%;
-            }
-        }
-
-        .content {
-            margin-top: 30px;
-
-            *:not(:last-child) {
-                margin-bottom: 20px;
-            }
-
-            a {
-                text-decoration: underline;
-            }
+        a {
+            text-decoration: underline;
         }
     }
 
     @media (max-width: 991px) {
-        .single-blog {
+        .default {
             padding: 55px 0;
-
-            .btn-brand {
-                margin-bottom: 40px;
-            }
 
             h1 {
                 font-size: 44px;
@@ -118,16 +88,8 @@
     }
 
     @media (max-width: 767px) {
-        .single-blog {
+        .default {
             padding: 40px 0;
-
-            .btn-brand {
-                margin-bottom: 25px;
-            }
-
-            .featured-image {
-                margin-top: 25px;
-            }
 
             h1, h2, h3, h4, h5, h6 {
                 line-height: 1.2;
@@ -161,12 +123,8 @@
                 font-size: 18px;
             }
 
-            .content {
-                margin-top: 25px;
-                
-                *:not(:last-child) {
-                    margin-bottom: 15px;
-                }
+            *:not(:last-child) {
+                margin-bottom: 10px;
             }
         }
     }

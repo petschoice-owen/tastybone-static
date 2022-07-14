@@ -108,6 +108,10 @@
                 border-left-width: 13px;
             }
         }
+
+        .btn-not-clickable {
+            pointer-events: none;
+        }
     }
 
     .map-section {
