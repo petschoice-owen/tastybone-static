@@ -5,6 +5,10 @@
 // -----------------------------------------------------------------------------
 
 .wpcf7 {
+    br {
+        display: none;
+    }
+
     .contact-form .required-asterisk, 
     .wpcf7 .required-asterisk {
         color: #e42313;
@@ -122,6 +126,10 @@
 
             padding-top: 20px;
             padding-bottom: 20px;
+        }
+
+        .wpcf7-spinner {
+            display: none;
         }
     }
 
