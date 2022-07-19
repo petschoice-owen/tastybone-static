@@ -100,13 +100,14 @@
 
     .testimonials {
         display: flex;
-        padding: 50px 0;
+        flex-wrap: wrap;
+        padding: 25px 0;
 
         .testimonial-item {
             display: flex;
             flex-wrap: wrap;
             width: 50%;
-            padding: 0 25px;
+            padding: 25px;
         }
 
         .wrapper {
@@ -212,7 +213,7 @@
         }
 
         .testimonials {
-            padding: 40px 0;
+            padding: 15px 0;
 
             .wrapper {
                 padding: 40px 30px;
@@ -301,7 +302,6 @@
 
         .testimonials {
             flex-direction: column;
-            padding: 25px 0;
 
             .testimonial-item {
                 width: 100%;
