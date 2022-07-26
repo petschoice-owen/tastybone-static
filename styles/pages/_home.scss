@@ -212,7 +212,7 @@
             object-fit: cover;
             object-position: center;
             width: 380px;
-            height: auto;
+            height: 380px;
             overflow: hidden;
             border-radius: 50%;
 
@@ -251,6 +251,7 @@
         .blog {
             .image-link {
                 width: 300px;
+                height: 300px;
             }
         }
     }
@@ -307,6 +308,7 @@
         .blog {
             .image-link {
                 width: 270px;
+                height: 270px;
             }
 
             .content {
@@ -391,6 +393,7 @@
 
             .image-link {
                 width: 300px;
+                height: 300px;
                 margin-bottom: 30px;
             }
 
@@ -429,6 +432,7 @@
 
         .blog .image-link {
             width: 260px;
+            height: 260px;
         }
     }
 }
